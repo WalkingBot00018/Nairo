@@ -82,3 +82,7 @@ ul li a.activo{
 ul li a:hover{
     opacity: 1;
 }
+
+.foto{
+    height: 40px;
+}

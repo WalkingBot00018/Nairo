@@ -1,7 +1,9 @@
-from flask import Flask,render_template
+from flask import Flask,render_template, request, redirect, url_for, 
+from flask_mysqldb  import mysql
+
 
 app = Flask(__name__)
-
+app.config['']
 @app.route('/')
 def inicio():
     return render_template('inicio.html')
