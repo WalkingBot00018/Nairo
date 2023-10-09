@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
+
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,43 +14,7 @@
 
 <body>
 
-    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="">Inicio</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="">adicional</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Videos
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./accion">Accion</a></li>
-                  <li><a class="dropdown-item" href="./supension">Suspenso</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="./terror">Terror</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ url_for('inicioseccion') }}">Iniciar Seccion</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ url_for('registrar') }}">Registrar</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-          </div>
-        </div>
-      </nav> -->
-
+   
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -80,4 +48,137 @@
 
     
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LODGING</title>
+    <link rel="stylesheet" href="./static/index.css">
+    <link rel="stylesheet" href="./js/code.jquery.com_jquery-3.7.1.min.js">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  
+    <header>
+        <div id="logo"> <!-- Nuevo div para el logotipo -->
+            <img src="./static/img/portada2.png" alt="Logo" width="100"> <!-- Cambia la ruta y el tamaño del logo -->
+        </div>
+
+
+        <nav>
+            <!-- Enlaces de navegación -->
+            
+            <a href="#banner" onclick="seleccionar(this)" class="selected">Inicio</a>
+            <a href="#nuestro" onclick="seleccionar(this)">Nuestro Hotel</a>
+            <!-- Icono del menú -->
+            
+            <a href="#" onclick="seleccionar(this)">Servicios</a>
+            <a href="#" onclick="seleccionar(this)">Reservas</a>
+            <a href="#" onclick="seleccionar(this)">inicio secion</a>
+            <a href="{{ url_for('registrar') }}" onclick="seleccionar(this)">Registrarse</a>
+        </nav>
+    </header>
+  <!-- {% block content %}
+  {% endblock %} -->
+    <section id="banner">
+        <div>
+            <div id="contenedor-banner" class="contenedor-banner">
+                <div id="caja" class="caja">
+                    <section class="section_caja"><img src="./static/img/hotel1.2.png" alt="" class="img_caja"></section>
+                    <section class="section_caja"><img src="./static/img/hotel1.3.png" alt="" class="img_caja"></section>
+                    <section class="section_caja"><img src="./static/img/hotel1.5.png" alt="" class="img_caja"></section>
+
+
+                </div>
+
+                <div id="btn-atras" class="btn-atras">&#60;</div>
+                <div id="btn-adelante" class="btn-adelante">&#62;</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="nuestro" class="contenedor sobre-nosotros">
+        <h2 class="titulo2">Nuestro Hotel</h2>
+        <div class="contenedor-sobre-nosotros">
+            
+            <img src="./static/img/proyecto.png" alt="" class="imagen-about-us">
+            <div class="contenido-textos">
+                <h3><span>1</span>el mejor hotel para descansar</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
+                    consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
+                    velit doloribus laboriosam ut.</p>
+                <h3><span>2</span>servicios de calidad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
+                    consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
+                    velit doloribus laboriosam ut.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portafolio">
+        <div class="contenedor">
+            <h2 class="titulo3">Portafolio</h2>
+            <div class="galeria-port">
+                <div class="imagen-port">
+                    <img src="./static/img/portafolio.webp" alt="">
+                    
+                </div>
+                <div class="imagen-port">
+                    <img src="./static/img/portafolio2.jpg" alt="">
+                    
+                </div>
+                <div class="imagen-port">
+                    <img src="./static/img/portafolio3.jpg" alt="">
+                    
+                </div>
+            
+               
+            </div>
+        </div>
+    </section>
+    
+
+    
+
+
+
+    
+    <!-- enlaces js -->
+    <script src="./static/js/banner.js"></script>
+    <script src="./static/js/inicio.js"></script>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>telefono</h4>
+                <p>8296312</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>8296312</p>
+            </div>
+            <div class="content-foo">
+                <h4>Locacion</h4>
+                <p>8296312</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Grupo de poryecto LODGING / Romario, Luz,Sagrario, Ruben </h2>
+    </footer>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

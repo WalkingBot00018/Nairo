@@ -1,7 +1,42 @@
 
-{% extends "inicioseccion.html" %}
-
+{% extends "layout.html" %}
 {% block content %}
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO</title>
+    <link rel="stylesheet" href="./static/formulariore.css">
+</head>
+<body>
+    <form action="/adicional" method="POST" id="form">
+        <div class="form">
+            <h1>REGISTRO</h1>
+            <div class="grupo">
+                <input type="number" name="nro_doc" id="nro_doc" required> <span class="barrita"></span>
+                <label for="">Numero Documento</label>
+            </div>
+            
+                <div class="grupo">
+                    <input type="text" name="nombre_usuario" id="nombre_usuario" required> <span class="barrita"></span>
+                    <label for="">Usuario</label>
+            </div>
+                
+                <div class="grupo">
+                    <input type="password" name="contrasena" id="contrasena" required> <span class="barrita"></span>
+                    <label for="">contraseña</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" name="id_rol" id="id_rol" required> <span class="barrita"></span>
+                    <label for="">id del rol</label>
+                </div>
+                <button type="submit">Registrarse</button>
+        </div>
+    </form>
+    
+</body>
+</html>
 {% endblock %}
